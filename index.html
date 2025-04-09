@@ -1,0 +1,1352 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Starcarz-Ludhiana | Premium Used Car Dealer</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <style>
+      .car-card:hover .car-details {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      .car-details {
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+      }
+      .blurred-bg {
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+    </style>
+  </head>
+  <body class="antialiased text-gray-800 bg-gray-100 font-sans">
+    <!-- Header/Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+      <div
+        class="container px-4 py-4 mx-auto md:flex md:justify-between md:items-center"
+      >
+        <div class="flex items-center justify-between">
+          <div class="flex items-center">
+            <div class="flex items-center">
+              <i class="fas fa-car text-blue-600 text-2xl mr-2"></i>
+              <span class="text-2xl font-bold text-blue-600 tracking-tight"
+                >STARCARZ</span
+              >
+              <!-- <span
+                class="ml-1 text-2xl font-semibold text-gray-700 tracking-tight"
+                >LUDHIANA</span
+              > -->
+            </div>
+          </div>
+          <div class="md:hidden">
+            <button
+              type="button"
+              class="text-gray-500 hover:text-blue-600 focus:outline-none"
+              id="mobile-menu-button"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+        <nav class="hidden md:flex items-center space-x-6">
+          <a
+            href="#"
+            class="font-medium text-blue-600 hover:text-blue-800 transition duration-300 border-b-2 border-blue-600 pb-1"
+            >Home</a
+          >
+          <a
+            href="#featured"
+            class="font-medium text-gray-600 hover:text-blue-600 transition duration-300 hover:border-b-2 hover:border-blue-600 pb-1"
+            >Featured Cars</a
+          >
+          <a
+            href="#services"
+            class="font-medium text-gray-600 hover:text-blue-600 transition duration-300 hover:border-b-2 hover:border-blue-600 pb-1"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="font-medium text-gray-600 hover:text-blue-600 transition duration-300 hover:border-b-2 hover:border-blue-600 pb-1"
+            >About Us</a
+          >
+          <a
+            href="#testimonials"
+            class="font-medium text-gray-600 hover:text-blue-600 transition duration-300 hover:border-b-2 hover:border-blue-600 pb-1"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="px-6 py-2 font-medium text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+            >Contact Us</a
+          >
+        </nav>
+      </div>
+      <!-- Mobile menu, show/hide based on menu state -->
+      <div class="hidden md:hidden" id="mobile-menu">
+        <div class="flex flex-col py-2 space-y-1 px-4 pb-3 bg-white">
+          <a href="#" class="block py-2 font-medium text-blue-600">Home</a>
+          <a
+            href="#featured"
+            class="block py-2 font-medium text-gray-600 hover:text-blue-600"
+            >Featured Cars</a
+          >
+          <a
+            href="#services"
+            class="block py-2 font-medium text-gray-600 hover:text-blue-600"
+            >Services</a
+          >
+          <a
+            href="#about"
+            class="block py-2 font-medium text-gray-600 hover:text-blue-600"
+            >About Us</a
+          >
+          <a
+            href="#testimonials"
+            class="block py-2 font-medium text-gray-600 hover:text-blue-600"
+            >Testimonials</a
+          >
+          <a
+            href="#contact"
+            class="block py-2 font-medium text-gray-600 hover:text-blue-600"
+            >Contact Us</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+      <div
+        class="bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 text-white"
+      >
+        <div
+          class="container mx-auto px-4 py-24 md:py-32 flex flex-col md:flex-row items-center relative"
+        >
+          <!-- Decorative elements -->
+          <div
+            class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-blue-400 opacity-10"
+          ></div>
+          <div
+            class="absolute bottom-10 -left-20 w-48 h-48 rounded-full bg-blue-300 opacity-10"
+          ></div>
+
+          <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10 z-10">
+            <span
+              class="inline-block px-4 py-1 bg-blue-500 bg-opacity-30 text-blue-100 rounded-full text-sm font-semibold mb-4"
+              >Punjab's Most Trusted</span
+            >
+            <h1
+              class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-4"
+            >
+              Find Your <span class="text-yellow-400">Perfect</span> Pre-Owned
+              Car
+            </h1>
+            <p class="text-xl md:text-2xl opacity-90 mb-8 font-light">
+              Premium vehicles at affordable prices with complete peace of mind.
+            </p>
+            <div class="flex flex-wrap gap-4">
+              <a
+                href="#featured"
+                class="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-full hover:bg-yellow-400 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >Explore Cars</a
+              >
+              <a
+                href="#contact"
+                class="px-8 py-3 bg-transparent border-2 border-white text-white font-semibold rounded-full hover:bg-white hover:text-blue-800 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >Contact Us</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 relative z-10">
+            <div class="relative">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-blue-600 to-blue-400 rounded-xl -rotate-3 scale-105 opacity-30"
+              ></div>
+              <img
+                src="https://luxorides.com/assets/images/bmw-3-series-rs20000-luxorides-luxury-car-rentals-for-wedding-corporate-personal-delhi-noida-gurgaon-ghaziabad-3.webp"
+                alt="Premium used cars"
+                class="rounded-xl shadow-2xl relative z-10 transform rotate-3 hover:rotate-0 transition-transform duration-500"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Stats bar -->
+      <div
+        class="bg-white shadow-xl py-6 rounded-xl mx-4 md:mx-auto -mt-8 relative z-20 max-w-5xl transform hover:scale-105 transition-transform duration-300"
+      >
+        <div
+          class="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+        >
+          <div class="px-4 border-r border-gray-200 last:border-0">
+            <div
+              class="text-3xl font-bold text-blue-600 flex justify-center items-center"
+            >
+              <i class="fas fa-car-alt mr-2 text-blue-400"></i>
+              <span>500+</span>
+            </div>
+            <div class="text-gray-600 font-medium">Cars Sold</div>
+          </div>
+          <div class="px-4 border-r border-gray-200 last:border-0">
+            <div
+              class="text-3xl font-bold text-blue-600 flex justify-center items-center"
+            >
+              <i class="fas fa-tag mr-2 text-blue-400"></i>
+              <span>100+</span>
+            </div>
+            <div class="text-gray-600 font-medium">Cars in Stock</div>
+          </div>
+          <div class="px-4 border-r border-gray-200 last:border-0">
+            <div
+              class="text-3xl font-bold text-blue-600 flex justify-center items-center"
+            >
+              <i class="fas fa-calendar-alt mr-2 text-blue-400"></i>
+              <span>10+</span>
+            </div>
+            <div class="text-gray-600 font-medium">Years Experience</div>
+          </div>
+          <div class="px-4">
+            <div
+              class="text-3xl font-bold text-blue-600 flex justify-center items-center"
+            >
+              <i class="fas fa-star mr-2 text-blue-400"></i>
+              <span>4.8/5</span>
+            </div>
+            <div class="text-gray-600 font-medium">Customer Rating</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Cars Section -->
+    <section id="featured" class="py-20 bg-gray-50">
+      <div class="container px-4 mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase"
+            >Our Collection</span
+          >
+          <h2 class="text-4xl font-bold text-gray-800 mt-2">
+            Featured Vehicles
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            Explore our premium hand-picked selection of quality pre-owned
+            vehicles
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- BMW 5 Series -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 car-card group"
+          >
+            <div class="relative">
+              <img
+                src="https://imgd.aeplcdn.com/664x374/n/cw/ec/175183/new-5-series-exterior-right-front-three-quarter.jpeg?isig=0&q=80"
+                alt="BMW 5 Series"
+                class="w-full h-56 object-cover"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-4 py-1 bg-purple-600 text-white text-sm font-bold rounded-full"
+                  >Luxury</span
+                >
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-24 opacity-80"
+              ></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">BMW 5 Series</h3>
+                <p class="text-sm opacity-90">2022 • Diesel • 12,000 km</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center">
+                  <i class="fas fa-tachometer-alt text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">12,000 km</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-gas-pump text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">Diesel</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-cog text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">Automatic</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mb-4">
+                <div class="text-2xl font-bold text-blue-600">₹55 Lac</div>
+                <div class="text-sm text-gray-500 line-through">₹60 Lac</div>
+              </div>
+              <div class="mt-6 car-details">
+                <a
+                  href="#"
+                  class="block w-full text-center py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md transform hover:scale-105 duration-300"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Audi A6 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 car-card group"
+          >
+            <div class="relative">
+              <img
+                src="https://imgd.aeplcdn.com/664x374/n/cw/ec/39472/a6-exterior-right-front-three-quarter-2.jpeg?isig=0&q=80"
+                alt="Audi A6"
+                class="w-full h-56 object-cover"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-4 py-1 bg-red-600 text-white text-sm font-bold rounded-full"
+                  >Premium</span
+                >
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-24 opacity-80"
+              ></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">Audi A6</h3>
+                <p class="text-sm opacity-90">2023 • Petrol • 8,000 km</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center">
+                  <i class="fas fa-tachometer-alt text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">8,000 km</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-gas-pump text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">Petrol</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-cog text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">Automatic</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mb-4">
+                <div class="text-2xl font-bold text-blue-600">₹62 Lac</div>
+                <div class="text-sm text-gray-500 line-through">₹68 Lac</div>
+              </div>
+              <div class="mt-6 car-details">
+                <a
+                  href="#"
+                  class="block w-full text-center py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md transform hover:scale-105 duration-300"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <!-- Car Card 3 -->
+          <div
+            class="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 car-card group"
+          >
+            <div class="relative">
+              <img
+                src="https://imgd.aeplcdn.com/664x374/n/cw/ec/159099/swift-exterior-right-side-view.jpeg?isig=0&q=80"
+                alt="Maruti Swift"
+                class="w-full h-56 object-cover"
+              />
+              <div class="absolute top-4 left-4">
+                <span
+                  class="px-4 py-1 bg-yellow-500 text-white text-sm font-bold rounded-full"
+                  >Popular</span
+                >
+              </div>
+              <div
+                class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent h-24 opacity-80"
+              ></div>
+              <div class="absolute bottom-4 left-4 text-white">
+                <h3 class="text-xl font-bold">Maruti Swift</h3>
+                <p class="text-sm opacity-90">2022 • Petrol • 15,000 km</p>
+              </div>
+            </div>
+            <div class="p-6">
+              <div class="flex justify-between items-center mb-4">
+                <div class="flex items-center">
+                  <i class="fas fa-tachometer-alt text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">15,000 km</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-gas-pump text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">Petrol</span>
+                </div>
+                <div class="flex items-center">
+                  <i class="fas fa-cog text-blue-600 mr-2"></i>
+                  <span class="text-gray-600 text-sm">Manual</span>
+                </div>
+              </div>
+              <div class="flex justify-between items-center mb-4">
+                <div class="text-2xl font-bold text-blue-600">₹6.2 Lac</div>
+                <div class="text-sm text-gray-500 line-through">₹6.8 Lac</div>
+              </div>
+              <div class="mt-6 car-details">
+                <a
+                  href="#"
+                  class="block w-full text-center py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md transform hover:scale-105 duration-300"
+                  >View Details</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-12 text-center">
+          <a
+            href="#"
+            class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+            >View All Inventory <i class="fas fa-arrow-right ml-2"></i
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-20 bg-white">
+      <div class="container px-4 mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase"
+            >Why Choose Us</span
+          >
+          <h2 class="text-4xl font-bold text-gray-800 mt-2">
+            The Starcarz Advantage
+          </h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            Experience the difference with transparent dealing and quality
+            assurance
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <!-- Advantage 1 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-car text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Certified Vehicles</h3>
+            <p class="text-gray-600">
+              Every car undergoes a rigorous 150+ point inspection before
+              listing
+            </p>
+          </div>
+
+          <!-- Advantage 2 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-shield-alt text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Warranty Options</h3>
+            <p class="text-gray-600">
+              Extended warranty packages available for complete peace of mind
+            </p>
+          </div>
+
+          <!-- Advantage 3 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-money-bill-wave text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Best Price Guarantee</h3>
+            <p class="text-gray-600">
+              Transparent pricing with the best value in the market
+            </p>
+          </div>
+
+          <!-- Advantage 4 -->
+          <div
+            class="bg-gray-50 rounded-xl p-6 text-center shadow-lg hover:shadow-xl transition-shadow transform hover:-translate-y-2 duration-300"
+          >
+            <div
+              class="w-16 h-16 mx-auto mb-6 bg-blue-100 rounded-full flex items-center justify-center"
+            >
+              <i class="fas fa-tools text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">After-Sales Support</h3>
+            <p class="text-gray-600">
+              Continued assistance with maintenance and service needs
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+      <div class="container px-4 mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase"
+            >What We Offer</span
+          >
+          <h2 class="text-4xl font-bold text-gray-800 mt-2">Our Services</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            We offer comprehensive solutions for all your automotive needs
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <!-- Service 1 -->
+          <div
+            class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-car text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Pre-Owned Car Sales</h3>
+            <p class="text-gray-600 mb-6">
+              Wide selection of quality pre-owned vehicles at competitive prices
+              with complete documentation.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition-colors"
+            >
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div
+            class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-exchange-alt text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Car Exchange</h3>
+            <p class="text-gray-600 mb-6">
+              Trade-in your current vehicle and get the best exchange value
+              towards your new purchase.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition-colors"
+            >
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div
+            class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-file-signature text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Documentation Support</h3>
+            <p class="text-gray-600 mb-6">
+              Hassle-free processing of all paperwork including RC transfer,
+              insurance, and financing.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition-colors"
+            >
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service 4 -->
+          <div
+            class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-money-bill-wave text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Financing Options</h3>
+            <p class="text-gray-600 mb-6">
+              Easy loan processing with multiple bank partnerships and
+              competitive interest rates.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition-colors"
+            >
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service 5 -->
+          <div
+            class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-tools text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">After-Sales Service</h3>
+            <p class="text-gray-600 mb-6">
+              Dedicated after-sales support with maintenance and repair services
+              for purchased vehicles.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition-colors"
+            >
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+
+          <!-- Service 6 -->
+          <div
+            class="p-8 bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2"
+          >
+            <div
+              class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6"
+            >
+              <i class="fas fa-search text-blue-600 text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-3">Car Inspection</h3>
+            <p class="text-gray-600 mb-6">
+              Comprehensive 150+ point inspection for all vehicles ensuring
+              quality and reliability.
+            </p>
+            <a
+              href="#"
+              class="text-blue-600 font-medium flex items-center hover:text-blue-800 transition-colors"
+            >
+              Learn More <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="py-20 bg-white">
+      <div class="container px-4 mx-auto">
+        <div class="grid gap-10 md:grid-cols-2 items-center">
+          <div class="relative">
+            <div
+              class="absolute -left-4 -top-4 w-64 h-64 bg-blue-100 rounded-lg -z-10"
+            ></div>
+            <div
+              class="absolute -right-4 -bottom-4 w-64 h-64 bg-yellow-100 rounded-lg -z-10"
+            ></div>
+            <img
+              src="https://img.sixt.com/1600/6991794e-8a4e-448d-9c1d-16fc931dec93.jpg"
+              alt="About Starcarz Ludhiana"
+              class="rounded-lg shadow-xl relative z-10"
+            />
+          </div>
+          <div>
+            <span class="text-blue-600 font-semibold tracking-wider uppercase"
+              >Our Story</span
+            >
+            <h2 class="text-4xl font-bold text-gray-800 mt-2 mb-6">
+              About Starcarz Ludhiana
+            </h2>
+            <p class="text-lg text-gray-600 mb-6">
+              Established in 2010, Starcarz Ludhiana has grown to become
+              Punjab's most trusted second-hand car dealer with a reputation for
+              quality, transparency, and customer satisfaction.
+            </p>
+            <p class="text-lg text-gray-600 mb-6">
+              Our mission is to provide high-quality pre-owned vehicles at
+              competitive prices while ensuring a hassle-free buying experience
+              for our customers.
+            </p>
+
+            <div class="grid grid-cols-2 gap-4 mt-8">
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Certified Vehicles</span
+                >
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <span class="text-gray-700 font-medium">Warranty Options</span>
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >Transparent Pricing</span
+                >
+              </div>
+              <div class="flex items-center">
+                <div
+                  class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="fas fa-check text-blue-600"></i>
+                </div>
+                <span class="text-gray-700 font-medium"
+                  >After-Sales Support</span
+                >
+              </div>
+            </div>
+            <div class="mt-10">
+              <a
+                href="#contact"
+                class="inline-block px-8 py-3 bg-blue-600 text-white font-semibold rounded-full hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >Get in Touch <i class="fas fa-arrow-right ml-2"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-50">
+      <div class="container px-4 mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase"
+            >Customer Experiences</span
+          >
+          <h2 class="text-4xl font-bold text-gray-800 mt-2">Testimonials</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            Hear what our satisfied customers have to say about their experience
+          </p>
+        </div>
+
+        <div class="grid gap-8 md:grid-cols-3">
+          <!-- Testimonial 1 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative"
+          >
+            <div class="absolute -top-5 left-1/2 transform -translate-x-1/2">
+              <div
+                class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+            <div class="text-yellow-400 flex mb-4 mt-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic mb-8">
+              "I purchased a Honda City from Starcarz Ludhiana and I couldn't be
+              happier with my experience. The team was professional,
+              transparent, and helped me through every step of the process."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-blue-600 font-bold">AS</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">Amrit Singh</h4>
+                <p class="text-sm text-gray-500">Ludhiana</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 2 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative"
+          >
+            <div class="absolute -top-5 left-1/2 transform -translate-x-1/2">
+              <div
+                class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+            <div class="text-yellow-400 flex mb-4 mt-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+            </div>
+            <p class="text-gray-600 italic mb-8">
+              "Got a great deal on my Hyundai Creta. The car was in excellent
+              condition as promised, and all the paperwork was handled
+              efficiently. Would definitely recommend Starcarz to anyone looking
+              for a quality used car."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-blue-600 font-bold">RK</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">Ravi Kumar</h4>
+                <p class="text-sm text-gray-500">Jalandhar</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonial 3 -->
+          <div
+            class="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 relative"
+          >
+            <div class="absolute -top-5 left-1/2 transform -translate-x-1/2">
+              <div
+                class="w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center"
+              >
+                <i class="fas fa-quote-left"></i>
+              </div>
+            </div>
+            <div class="text-yellow-400 flex mb-4 mt-3">
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star"></i>
+              <i class="fas fa-star-half-alt"></i>
+            </div>
+            <p class="text-gray-600 italic mb-8">
+              "The loan assistance provided by Starcarz was incredibly helpful.
+              They got me a great interest rate and made the entire financing
+              process smooth. The Swift I purchased has been running perfectly
+              for the past year."
+            </p>
+            <div class="flex items-center">
+              <div
+                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4"
+              >
+                <span class="text-blue-600 font-bold">PK</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-gray-800">Priya Kaur</h4>
+                <p class="text-sm text-gray-500">Amritsar</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section
+      class="py-20 bg-gradient-to-br from-blue-900 via-blue-700 to-blue-500 text-white relative overflow-hidden"
+    >
+      <!-- Decorative elements -->
+      <div
+        class="absolute -top-20 -right-20 w-64 h-64 rounded-full bg-blue-400 opacity-10"
+      ></div>
+      <div
+        class="absolute bottom-10 -left-20 w-48 h-48 rounded-full bg-blue-300 opacity-10"
+      ></div>
+
+      <div class="container px-4 mx-auto text-center relative z-10">
+        <h2 class="text-4xl font-bold mb-6">Ready to Find Your Dream Car?</h2>
+        <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">
+          Visit our showroom today or book an appointment to explore our premium
+          collection of pre-owned vehicles.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a
+            href="#contact"
+            class="px-8 py-3 bg-white text-blue-600 font-semibold rounded-full hover:bg-gray-100 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+            >Contact Us</a
+          >
+          <a
+            href="#"
+            class="px-8 py-3 bg-yellow-500 text-gray-900 font-semibold rounded-full hover:bg-yellow-400 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+            >View Inventory</a
+          >
+        </div>
+        <div
+          class="mt-10 pt-10 border-t border-blue-400 border-opacity-30 grid grid-cols-2 md:grid-cols-4 gap-6 text-center"
+        >
+          <div class="flex flex-col items-center">
+            <i class="fas fa-map-marker-alt text-3xl mb-3 text-yellow-400"></i>
+            <p class="text-sm">123 Ferozepur Road, Near xyz Mall, Ludhiana</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-phone-alt text-3xl mb-3 text-yellow-400"></i>
+            <p class="text-sm">+91 98765 43210</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-envelope text-3xl mb-3 text-yellow-400"></i>
+            <p class="text-sm">info@starcarzludhiana.com</p>
+          </div>
+          <div class="flex flex-col items-center">
+            <i class="fas fa-clock text-3xl mb-3 text-yellow-400"></i>
+            <p class="text-sm">Mon-Sat: 9:00 AM - 7:00 PM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+      <div class="container px-4 mx-auto">
+        <div class="text-center mb-16">
+          <span class="text-blue-600 font-semibold tracking-wider uppercase"
+            >Get In Touch</span
+          >
+          <h2 class="text-4xl font-bold text-gray-800 mt-2">Contact Us</h2>
+          <div class="w-24 h-1 bg-blue-600 mx-auto mt-4 rounded-full"></div>
+          <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            We're here to answer your questions and help you find your perfect
+            car
+          </p>
+        </div>
+
+        <div class="grid gap-10 md:grid-cols-2">
+          <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+            <h3 class="text-2xl font-bold mb-6 text-gray-800">
+              Send us a Message
+            </h3>
+            <form>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+                <div>
+                  <label
+                    class="block text-gray-700 text-sm font-medium mb-2"
+                    for="name"
+                    >Full Name *</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    id="name"
+                    type="text"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label
+                    class="block text-gray-700 text-sm font-medium mb-2"
+                    for="phone"
+                    >Phone Number *</label
+                  >
+                  <input
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    id="phone"
+                    type="tel"
+                    placeholder="Your phone number"
+                  />
+                </div>
+              </div>
+              <div class="mb-6">
+                <label
+                  class="block text-gray-700 text-sm font-medium mb-2"
+                  for="email"
+                  >Email Address *</label
+                >
+                <input
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  id="email"
+                  type="email"
+                  placeholder="Your email"
+                />
+              </div>
+              <div class="mb-6">
+                <label
+                  class="block text-gray-700 text-sm font-medium mb-2"
+                  for="interest"
+                  >I'm interested in *</label
+                >
+                <select
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  id="interest"
+                >
+                  <option value="">Select an option</option>
+                  <option value="buy">Buying a car</option>
+                  <option value="sell">Selling my car</option>
+                  <option value="exchange">Car exchange</option>
+                  <option value="finance">Car financing</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="mb-6">
+                <label
+                  class="block text-gray-700 text-sm font-medium mb-2"
+                  for="message"
+                  >Message *</label
+                >
+                <textarea
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  id="message"
+                  rows="4"
+                  placeholder="Your message"
+                ></textarea>
+              </div>
+              <div class="text-right">
+                <button
+                  type="submit"
+                  class="px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+          <div>
+            <div class="bg-gray-800 text-white rounded-xl p-8 shadow-lg mb-8">
+              <h3 class="text-2xl font-bold mb-6">Visit Our Showroom</h3>
+              <div class="flex items-start mb-6">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-map-marker-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Address</h4>
+                  <p class="text-gray-300">123 Ferozepur Road, Near xyz Mall</p>
+                  <p class="text-gray-300">Ludhiana, Punjab 141001</p>
+                </div>
+              </div>
+              <div class="flex items-start mb-6">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-phone-alt text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Phone</h4>
+                  <p class="text-gray-300">+91 98765 43210</p>
+                  <p class="text-gray-300">+91 98765 43211</p>
+                </div>
+              </div>
+              <div class="flex items-start mb-6">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-envelope text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Email</h4>
+                  <p class="text-gray-300">info@starcarzludhiana.com</p>
+                  <p class="text-gray-300">sales@starcarzludhiana.com</p>
+                </div>
+              </div>
+              <div class="flex items-start">
+                <div class="text-blue-400 mr-4 mt-1">
+                  <i class="fas fa-clock text-xl"></i>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg mb-1">Working Hours</h4>
+                  <p class="text-gray-300">
+                    Monday - Saturday: 9:00 AM - 7:00 PM
+                  </p>
+                  <p class="text-gray-300">Sunday: Closed</p>
+                </div>
+              </div>
+            </div>
+            <div class="bg-gray-50 rounded-xl p-8 shadow-lg">
+              <h3 class="text-2xl font-bold mb-6 text-gray-800">Follow Us</h3>
+              <div class="flex space-x-4">
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >
+                  <i class="fab fa-facebook-f text-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-blue-400 text-white rounded-full flex items-center justify-center hover:bg-blue-500 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >
+                  <i class="fab fa-twitter text-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-pink-600 text-white rounded-full flex items-center justify-center hover:bg-pink-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >
+                  <i class="fab fa-instagram text-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-red-600 text-white rounded-full flex items-center justify-center hover:bg-red-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >
+                  <i class="fab fa-youtube text-lg"></i>
+                </a>
+                <a
+                  href="#"
+                  class="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-1 duration-300"
+                >
+                  <i class="fab fa-whatsapp text-lg"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-6">
+      <div class="container px-4 mx-auto">
+        <div class="grid gap-8 mb-10 md:grid-cols-4">
+          <div>
+            <div class="flex items-center mb-6">
+              <i class="fas fa-car text-blue-400 text-2xl mr-2"></i>
+              <div>
+                <div class="text-2xl font-bold">STARCARZ</div>
+                <div class="text-xl text-blue-400">LUDHIANA</div>
+              </div>
+            </div>
+            <p class="text-gray-400 mb-6">
+              Punjab's most trusted second-hand car dealer with premium vehicles
+              at affordable prices.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition-colors"
+              >
+                <i class="fab fa-youtube"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Quick Links</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#featured"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Featured Cars</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#testimonials"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Testimonials</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Contact Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Our Services</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Pre-Owned Car Sales</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Car Exchange</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Documentation Support</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Financing Options</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  After-Sales Service</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors flex items-center"
+                  ><i
+                    class="fas fa-chevron-right text-xs mr-2 text-blue-400"
+                  ></i>
+                  Car Inspection</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">Newsletter</h3>
+            <p class="text-gray-400 mb-6">
+              Subscribe to our newsletter for latest updates on new car arrivals
+              and special offers.
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email address"
+                class="px-4 py-2 w-full rounded-l-lg focus:outline-none bg-gray-800 text-gray-200 border border-gray-700"
+              />
+              <button
+                type="submit"
+                class="bg-blue-600 text-white px-4 rounded-r-lg hover:bg-blue-700 transition-colors"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-800 text-center text-gray-400 text-sm"
+        >
+          <p>&copy; 2025 Starcarz Ludhiana. All Rights Reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a
+      href="#"
+      class="fixed bottom-8 right-8 w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center shadow-lg hover:bg-blue-700 transition-colors transform hover:-translate-y-1 duration-300 z-50"
+    >
+      <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- JavaScript for Mobile Menu Toggle -->
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const mobileMenuButton = document.getElementById("mobile-menu-button");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll("a");
+        mobileLinks.forEach((link) => {
+          link.addEventListener("click", function () {
+            mobileMenu.classList.add("hidden");
+          });
+        });
+
+        // Smooth scrolling for all anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return; // Skip for "#" links
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              window.scrollTo({
+                top: targetElement.offsetTop - 80, // Offset for fixed header
+                behavior: "smooth",
+              });
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>
